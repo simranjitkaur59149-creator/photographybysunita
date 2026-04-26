@@ -1,0 +1,84 @@
+/* Container adjustments */
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 80px auto;
+    max-width: 600px; /* Prevents the form from being too wide on large screens */
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Typography Improvements */
+.contact h1 {
+    color: #232323;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 0.05em; /* Added slight spacing for elegance */
+    font-size: clamp(28px, 5vw, 38px); /* Responsive font size */
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    color: #555; /* Slightly softer color for readability */
+    line-height: 1.6;
+    font-size: 16px;
+    font-family: 'Cormorant Garamond', serif;
+    max-width: 450px;
+    margin: 0 auto 40px auto;
+}
+.contact-logo
+{
+    width: 200px;
+}
+/* Form Layout */
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px; /* Modern way to handle spacing between elements */
+}
+
+/* Input Fields */
+.input {
+    width: 100%; /* Spans the full width of the form container */
+    box-sizing: border-box; /* Ensures padding doesn't break the width */
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid #ccc; /* Subtle initial border */
+    background-color: transparent;
+    padding: 12px 5px;
+    font-family: inherit;
+    font-size: 18px;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Input Focus State */
+.input:focus {
+    border-bottom: 1px solid black;
+    /* Subtle lift effect on focus */
+}
+
+/* Button Styling */
+.send-btn {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    width: fit-content;
+    padding: 12px 40px;
+    margin: 30px auto 0;
+    cursor: pointer;
+    /* text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 13px; */
+    transition: all 0.3s ease;
+}
+
+/* Button Hover State */
+.send-btn:hover {
+    background-color: white;
+    color: #000 !important;
+}

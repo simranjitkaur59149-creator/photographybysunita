@@ -1,0 +1,150 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 60px; /* reduced height */
+  z-index: 1000;
+
+  transition: all 0.3s ease;
+}
+
+/* ===== Home Navbar ===== */
+.home-navbar {
+  position: absolute;
+  background: transparent;
+}
+
+/* ===== Other Pages Navbar (FIXED LOOK) ===== */
+.other-navbar {
+  /* background: #ffffff; */
+  /* border-bottom: 1px solid rgba(0,0,0,0.06); */
+}
+
+/* ===== Logo (FIX BIGGEST ISSUE) ===== */
+.logo {
+  height: 89px;   /* 🔥 smaller = premium look */
+  width: auto;
+}
+
+/* ===== Nav Links ===== */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 35px; /* better spacing */
+}
+
+/* ===== Links ===== */
+.nav-links a {
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.5px;
+
+  position: relative;
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Home (white text) */
+.home-navbar .nav-links a {
+  color: #ffffff;
+}
+
+/* Other pages (dark text) */
+.other-navbar .nav-links a {
+  color: #222;
+}
+
+/* Hover underline (cleaner) */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px; /* thinner */
+  background: #c9a36a;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Active */
+.nav-links .active {
+  color: #c9a36a;
+}
+
+.nav-links .active::after {
+  width: 100%;
+}
+
+/* ===== Toggle ===== */
+.toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.home-navbar .toggle {
+  color: white;
+}
+
+.other-navbar .toggle {
+  color: black;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+
+    width: 250px;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.95);
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 100px 25px;
+    gap: 25px;
+
+    transition: right 0.4s ease;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a {
+    color: white;
+    font-size: 18px;
+  }
+}
