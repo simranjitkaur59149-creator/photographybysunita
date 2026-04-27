@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import "./about.css";
 // import sunita from "./assets/about.PNG";
 import sunita from "./assets/sunita.jpeg";
@@ -8,6 +9,21 @@ import img3 from "./assets/card3.jpg";
 import { useNavigate } from "react-router-dom";
 export default function About() {
   const navigate=useNavigate()
+  useEffect(() => {
+  const elements = document.querySelectorAll(".animate");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach((el) => observer.observe(el));
+
+  return () => observer.disconnect();
+}, []);
   return (
     <>
       <main className="about">
@@ -18,8 +34,8 @@ export default function About() {
 
           <div className="story-container">
             <div className="intro">
-              <h1>My Story</h1>
-              <p>
+              <h1 className="animate slide-up">My Story</h1>
+              <p className="animate slide-up delay-1">
                 I’m <b>Sunita</b>, a passionate photographer driven by the
                 art of capturing genuine moments and timeless visuals. My
                 journey began with a simple curiosity—observing light, emotion,
@@ -33,7 +49,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="image-wrapper">
+            <div className="image-wrapper animate slide-right delay-2">
               <img className="img" src={sunita} alt="Sunita Mirza" />
             </div>
           </div>
@@ -41,7 +57,7 @@ export default function About() {
         <section className="promotion">
           <h1>"WE dont just take photos ,we preserve emotions"</h1>
           <div className="card-container">
-            <div className="card">
+            <div className="card animate slide-up delay-1">
               <figure>
                 <img className="card-img" src={img1} alt="" />
               </figure>
@@ -56,7 +72,7 @@ export default function About() {
                 <h5>Connection. Comfort. Confidence.</h5>
               </div>
             </div>
-            <div className="card">
+            <div className="card animate slide-up delay-2">
               <figure>
                 <img className="card-img" src={img2}   alt="" />
               </figure>
@@ -71,7 +87,7 @@ export default function About() {
                 <h5>Creativity. Expression. Identity.</h5>
               </div>
             </div>
-            <div className="card">
+            <div className="card  animate slide-up delay-3">
               <figure>
                 <img className="card-img" src={img3} alt="" />
               </figure>
@@ -87,8 +103,8 @@ export default function About() {
               </div>
             </div>
           </div>
-          <h3>Lets create something meaningful</h3>
-          <button className="button" onClick={()=>navigate("/photography/contact")} >Get in Touch</button>
+          <h3 className="animate slide-up delay-2">Lets create something meaningful</h3>
+          <button className="button animate slide-up delay-3" onClick={()=>navigate("/photography/contact")} >Get in Touch</button>
         </section>
       </main>
     </>
