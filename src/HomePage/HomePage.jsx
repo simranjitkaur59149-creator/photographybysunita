@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import "./homepage.css";
 import work from "../assets/worksec.png";
-import work5 from "../assets/work5.jpeg";
-import work2 from "../assets/work2.jpeg";
-import work3 from "../assets/work6.jpeg";
-import work4 from "../assets/work4.jpeg";
+import work01 from "../assets/work01.jpeg";
+import work02 from "../assets/work02.png";
+import work03 from "../assets/work03.jpeg";
+
+// import work4 from "../assets/work4.jpeg";
 import { Camera, CalendarDays, BriefcaseBusiness, Sparkles } from "lucide-react";
 
 import { useNavigate } from "react-router-dom";
@@ -31,7 +32,7 @@ export default function HomePage() {
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
-  }, []);
+  });
 
   return (
     <>
@@ -47,7 +48,7 @@ export default function HomePage() {
                 Capturing Moments Thats Matter
               </h1>
             </div>
-            <h2 className="animate slide-up delay-1">By Sunita</h2>
+            <h2 className="animate slide-up delay-1">By mirza</h2>
           </div>
         </div>
       </section>
@@ -64,9 +65,9 @@ export default function HomePage() {
             </p>
 
             <figure className="work-img">
-              <img className="animate slide-left delay-1" src={work5} alt="" />
-              <img className="animate slide-up delay-2" src={work3} alt="" />
-              <img className="animate slide-right delay-3" src={work4} alt="" />
+              <img className="animate slide-left delay-1" src={work01} alt="" />
+              <img  className=" wide animate slide-up delay-2" src={work02} alt="" />
+              <img className=" large animate slide-right delay-3" src={work03} alt="" />
             </figure>
 
             <div className="btn animate slide-up delay-2">

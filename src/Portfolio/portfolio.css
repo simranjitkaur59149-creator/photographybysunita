@@ -18,7 +18,8 @@
 }
 
 .portfolio-container img:hover {
-    transform: scale(1.03);   /* smaller zoom to avoid overflow */
+
+    transform: scale(2.0);   /* smaller zoom to avoid overflow */
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 /* .large {

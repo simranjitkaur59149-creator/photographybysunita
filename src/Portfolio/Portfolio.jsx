@@ -11,6 +11,7 @@ import img6 from "../assets/portfolio/IMG_0296.PNG"
 import img7 from "../assets/portfolio/IMG_6190.PNG"
 import Navbar from '../components/Navbar'
 export default function Portfolio() {
+
   return (
   <>
   <div style={{background:"black"}}>
