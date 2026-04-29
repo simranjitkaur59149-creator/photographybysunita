@@ -15,7 +15,9 @@ export default function Portfolio() {
   return (
   <>
   <div style={{background:"black"}}>
-    <Navbar/>
+ 
+    
+   
   <section className='portfolio-container'>
 
     <img src={img1} alt="" />
