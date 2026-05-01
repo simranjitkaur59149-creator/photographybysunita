@@ -13,7 +13,8 @@ export default function Navbar() {
   
   const location = useLocation();
 const isHome =
-  location.pathname === "/photography" ||
+  location.pathname === "/photography" 
+  ||
   location.pathname === "/photography/portfolio";
 
 

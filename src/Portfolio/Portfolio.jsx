@@ -19,6 +19,19 @@ import img08 from "../assets/portfolio/img08.jpeg"
 import img09 from "../assets/portfolio/img09.PNG"
 import img10 from "../assets/portfolio/img10.jpeg"
 import img11 from "../assets/portfolio/img11.PNG"
+import img12 from "../assets/portfolio/img12.jpeg"
+import img13 from "../assets/portfolio/img13.jpeg"
+import img14 from "../assets/portfolio/img14.jpeg"
+import img15 from "../assets/portfolio/img15.PNG"
+import img16 from "../assets/portfolio/img16.jpeg"
+import img17 from "../assets/portfolio/img17.jpeg"
+import img18 from "../assets/portfolio/img18.jpeg"
+import img19 from "../assets/portfolio/img19.jpeg"
+import img20 from "../assets/portfolio/img20.jpeg"
+import img21 from "../assets/portfolio/img21.jpeg"
+import img22 from "../assets/portfolio/img22.PNG"
+import img23 from "../assets/portfolio/img23.jpeg"
+
 import Navbar from '../components/Navbar'
 export default function Portfolio() {
 
@@ -42,20 +55,25 @@ export default function Portfolio() {
     <img src={img11} alt="" />
     <img src={img03} alt="" />
     <img src={img10} alt="" />
+
+    <img src={img13} alt="" />
+    <img src={img12} alt="" />
+    <img src={img14} alt="" />
+
+    <img src={img16} alt="" />
+    <img src={img17} alt="" />
+
+    <img src={img18} alt="" />
+    <img src={img22} alt="" />
+    <img src={img19} alt="" />
+
+    <img src={img20} alt="" />
+    <img src={img21} alt="" />
+    {/* <img src={img23} alt="" /> */}
+    
     
     <img src={img06} alt="" />
     <img src={img02} alt="" />
-    <img src={img1} alt="" />
-    <img src={img1} alt="" />
-    <img src={img1} alt="" />
-    <img src={img1} alt="" />
-    <img src={img1} alt="" />
-    <img src={img1} alt="" />
-    <img src={img1} alt="" />
-    <img src={img1} alt="" />
-    <img src={img1} alt="" />
-    <img src={img1} alt="" />
-    <img src={img1} alt="" />
   </section>
   </div>
   </>
