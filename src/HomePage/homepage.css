@@ -137,6 +137,7 @@
 }
 
 .work-txt h1 {
+    font-family: "Poppins", sans-serif;
   margin: 10px auto;
   font-size: 38px;
   text-align: center;
@@ -144,6 +145,7 @@
 }
 
 .work-txt p {
+    font-family:'Courier New', Courier, monospace;
   width: 100%;
   text-align: justify;
   line-height: 27px;
@@ -205,7 +207,7 @@
 }
 
 .services-card {
-  border: 1px solid #eee;
+  border: 2px solid #eee;
   border-radius: 14px;
   padding: 25px;
   height: 230px;

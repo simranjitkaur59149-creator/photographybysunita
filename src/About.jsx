@@ -4,7 +4,8 @@ import "./about.css";
 // import sunita from "./assets/about.PNG";
 import sunita from "./assets/sunita.jpeg";
 import img1 from "./assets/card1.jpg";
-import img2 from "./assets/card2.jpg";
+// import img2 from "./assets/card2.jpg";
+import img2 from "./assets/about.PNG";
 import img3 from "./assets/card3.jpg";
 import { useNavigate } from "react-router-dom";
 export default function About() {
@@ -55,7 +56,7 @@ export default function About() {
           </div>
         </section>
         <section className="promotion">
-          <h1>"WE dont just take photos ,we preserve emotions"</h1>
+          <h1>" I dont just take photos , I preserve emotions"</h1>
           <div className="card-container">
             <div className="card animate slide-up delay-1">
               <figure>
@@ -74,7 +75,7 @@ export default function About() {
             </div>
             <div className="card animate slide-up delay-2">
               <figure>
-                <img className="card-img" src={img2}   alt="" />
+                <img className="card-img" style={{objectFit:"cover"}} src={img2}   alt="" />
               </figure>
               <div>
                 <h1>Your Vision</h1>

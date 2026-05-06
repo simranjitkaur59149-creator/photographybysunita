@@ -10,7 +10,8 @@
   padding: 100px 15px 200px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-  gap: 15px;
+  /* gap: 15px; */
+  gap: 40px;
 }
 
 /* 2. Base Image Styles */

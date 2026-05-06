@@ -84,7 +84,7 @@ export default function HomePage() {
 
       <section>
         <div className="serve-sec">
-          <h4 className="animate slide-up">what we do</h4>
+          <h4 className="animate slide-up">what I do</h4>
           <h1 className="animate slide-up delay-1">
             PHOTOGRAPHY SERVICES
           </h1>

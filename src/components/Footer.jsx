@@ -57,8 +57,12 @@ export default function Footer() {
               </Link>{" "}
             </li>
           </ul>
+             <hr />
+      <p style={{wordSpacing:"5px"}}> 2026 All CopyRights are reserved by Mirza </p><hr />
         </section>
+      
       </footer>
+     
     </>
   );
 }  
