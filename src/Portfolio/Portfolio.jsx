@@ -42,10 +42,10 @@ export default function Portfolio() {
     
    
   <section className='portfolio-container'>
-
+{/* 
     <img src={img05} alt="" />
     <img src={img04} alt="" />
-    <img src={img01} alt="" />
+    <img src={img01} alt="" /> */}
 
     <img src={img07} alt="" />
     <img src={img08} alt="" />
