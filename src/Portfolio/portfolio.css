@@ -1,0 +1,106 @@
+/* ============================================
+   PORTFOLIO STYLES
+   ============================================ */
+
+/* 1. Main Container — responsive grid */
+.portfolio-container {
+  background-color: black;
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 100px 15px 200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  /* gap: 15px; */
+  gap: 40px;
+}
+
+/* 2. Base Image Styles */
+.portfolio-container img {
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 5px solid white;
+  border-radius: 40px;
+  object-fit: cover;
+  transform-origin: center center;
+  will-change: transform;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-radius 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* ============================================
+   3. HOVER EFFECTS (Desktop ≥ 1321px)
+   Full zoom with object-fit: contain
+   ============================================ */
+@media (min-width: 1321px) {
+  .portfolio-container img:hover {
+    position: relative;
+    z-index: 10;
+    margin-top: 50px;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    object-fit: contain;
+    transform: scale(1.3);
+    /* box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2); */
+  }
+}
+
+/* ============================================
+   4. HOVER EFFECTS (Mid-range 713px – 1320px)
+   Smooth scaling between 1.05× and 1.18×
+   ============================================ */
+@media (min-width: 713px) and (max-width: 1320px) {
+  .portfolio-container img:hover {
+    position: relative;
+    z-index: 10;
+    border-color: transparent;
+    border-radius: 16px;
+    object-fit: contain;
+    transform: scale(clamp(1.05, 0.85 + 0.18 * ((100vw - 713px) / 607), 1.18));
+    /* box-shadow: 0 8px 24px rgba(255, 255, 255, 0.18); */
+  }
+}
+
+/* ============================================
+   5. TABLET CONTAINER TWEAKS (≤ 768px)
+   ============================================ */
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 40px 15px;
+    gap: 12px;
+    overflow: hidden;
+  }
+}
+
+/* ============================================
+   6. MOBILE (≤ 712px) — minimal zoom
+   ============================================ */
+@media (max-width: 712px) {
+  .portfolio-container {
+    margin: 0;
+    padding: 20px 10px;
+  }
+
+  .portfolio-container img {
+    margin-top: 40px;
+    border: 2px solid white;
+    border-radius: 20px;
+  }
+
+  .portfolio-container img:hover {
+    transform: scale(1.04);
+    border-radius: 12px;
+  }
+}
+@media (min-width: 300px) and (max-width: 722px) {
+  .portfolio-container img {
+    margin-top: 20%;
+    border: 2px solid white;
+    border-radius: 20px;
+  }
+}
