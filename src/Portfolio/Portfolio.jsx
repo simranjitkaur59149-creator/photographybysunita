@@ -72,8 +72,8 @@ export default function Portfolio() {
     {/* <img src={img23} alt="" /> */}
     
     
-    {/* <img src={img06} alt="" />
-    <img src={img02} alt="" /> */}
+    <img src={img06} alt="" />
+    <img src={img02} alt="" />
   </section>
   </div>
   </>
