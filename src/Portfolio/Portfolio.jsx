@@ -18,10 +18,10 @@ import img15 from "../assets/portfolio/IMG15.jpeg";
 import img16 from "../assets/portfolio/IMG16.jpeg";
 
 import img18 from "../assets/portfolio/IMG18.PNG";
-import img19 from "../assets/portfolio/IMG19.jpeg";
-import img20 from "../assets/portfolio/IMG20.jpeg";
-import img21 from "../assets/portfolio/IMG21.jpeg";
-import img22 from "../assets/portfolio/IMG22.PNG";
+import img19 from "../assets/portfolio/img19.jpeg";
+import img20 from "../assets/portfolio/img20.jpeg";
+import img21 from "../assets/portfolio/img21.jpeg";
+import img22 from "../assets/portfolio/img22.PNG";
 
 
 import { Link } from "react-router-dom";
