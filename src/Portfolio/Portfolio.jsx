@@ -13,9 +13,9 @@ import img09 from "../assets/portfolio/img09.PNG";
 import img10 from "../assets/portfolio/IMG10.PNG";
 import img11 from "../assets/portfolio/IMG11.jpeg";
 import img13 from "../assets/portfolio/img13.jpeg";
-import img14 from "../assets/portfolio/IMG14.jpeg";
+import img14 from "../assets/portfolio/img14.jpeg";
 import img15 from "../assets/portfolio/IMG15.jpeg";
-import img16 from "../assets/portfolio/IMG16.jpeg";
+import img16 from "../assets/portfolio/img16.jpeg";
 
 import img18 from "../assets/portfolio/IMG18.PNG";
 import img19 from "../assets/portfolio/img19.jpeg";
