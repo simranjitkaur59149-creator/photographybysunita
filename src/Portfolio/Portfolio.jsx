@@ -23,7 +23,7 @@ import img20 from "../assets/portfolio/IMG20.jpeg";
 import img21 from "../assets/portfolio/IMG21.jpeg";
 import img22 from "../assets/portfolio/IMG22.PNG";
 
-import Navbar from "../components/Navbar";
+
 import { Link } from "react-router-dom";
 export default function Portfolio() {
   useEffect(() => {
@@ -53,7 +53,7 @@ export default function Portfolio() {
       <div style={{ background: "white" }}>
         <section className="porfolio-banner">
           <div className="banner-layer">
-            {/* <Navbar /> */}
+            
             <div className="banner-content">
               <h1>
                 Visual <span>Stories.</span>
