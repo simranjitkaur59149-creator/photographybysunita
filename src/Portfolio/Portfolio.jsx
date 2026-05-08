@@ -24,6 +24,7 @@ import img21 from "../assets/portfolio/IMG21.jpeg";
 import img22 from "../assets/portfolio/IMG22.PNG";
 
 import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 export default function Portfolio() {
   useEffect(() => {
   const elements = document.querySelectorAll(
@@ -99,9 +100,9 @@ export default function Portfolio() {
 
   <h2>Available For Projects & Collaborations</h2>
 
-  <a href="/contact">
+  <Link to="/photography/contact">
     Get In Touch
-  </a>
+  </Link>
 </section>
       </div>
     </>
