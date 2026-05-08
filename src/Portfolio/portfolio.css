@@ -1,106 +1,592 @@
 /* ============================================
-   PORTFOLIO STYLES
-   ============================================ */
+   BANNER SECTION
+============================================ */
+.porfolio-banner {
+  background-image: url("../assets/portfolio/portfolio.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  color: white;
+  font-family: serif;
+  overflow: hidden;
+}
 
-/* 1. Main Container — responsive grid */
+/* Smooth background zoom animation */
+.porfolio-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  animation: bannerZoom 12s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+@keyframes bannerZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.banner-layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 60px 20px;
+  gap: 15px;
+  text-align: left;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  animation: slideUp 1.2s ease;
+}
+
+/* Text Animations */
+.banner h1,
+.banner h2,
+.banner h3 {
+  opacity: 0;
+  animation: fadeSlide 1s ease forwards;
+}
+
+.banner h1 {
+  font-size: 58px;
+  line-height: 1.3;
+  max-width: 75%;
+  animation-delay: 0.2s;
+}
+
+.banner h2 {
+  text-transform: uppercase;
+  font-size: 38px;
+  line-height: 1.3;
+  color: #c9a36a;
+  animation-delay: 0.5s;
+}
+
+.banner h3 {
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 600px;
+  color: #c9a36a;
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   PORTFOLIO CONTAINER (DESKTOP)
+============================================ */
 .portfolio-container {
-  background-color: black;
   width: min(1200px, 100%);
   margin: 0 auto;
-  padding: 100px 15px 200px;
+  padding: 80px 15px 120px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-  /* gap: 15px; */
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
 }
 
-/* 2. Base Image Styles */
+/* ============================================
+   IMAGE STYLES
+============================================ */
 .portfolio-container img {
-  margin-top: 50px;
   width: 100%;
-  height: 100%;
+  height: 420px;
   display: block;
-  border: 5px solid white;
-  border-radius: 40px;
   object-fit: cover;
-  transform-origin: center center;
-  will-change: transform;
+  margin-top: 0;
+  border: 4px solid white;
+  border-radius: 28px;
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-radius 0.3s ease,
-    border-color 0.3s ease;
+    transform 0.5s ease,
+    border-radius 0.5s ease,
+    filter 0.5s ease,
+    box-shadow 0.5s ease;
+  animation: fadeUp 1s ease;
+  cursor: pointer;
 }
 
-/* ============================================
-   3. HOVER EFFECTS (Desktop ≥ 1321px)
-   Full zoom with object-fit: contain
-   ============================================ */
-@media (min-width: 1321px) {
-  .portfolio-container img:hover {
-    position: relative;
-    z-index: 10;
-    margin-top: 50px;
-    border: 0;
-    padding: 0;
-    border-radius: 0;
-    object-fit: contain;
-    transform: scale(1.3);
-    /* box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2); */
+/* Floating animation */
+.portfolio-container img:nth-child(odd) {
+  animation:
+    fadeUp 1s ease,
+    floatImage 5s ease-in-out infinite;
+}
+
+.portfolio-container img:nth-child(even) {
+  animation:
+    fadeUp 1s ease,
+    floatImage2 6s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes floatImage2 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 
 /* ============================================
-   4. HOVER EFFECTS (Mid-range 713px – 1320px)
-   Smooth scaling between 1.05× and 1.18×
-   ============================================ */
-@media (min-width: 713px) and (max-width: 1320px) {
-  .portfolio-container img:hover {
-    position: relative;
-    z-index: 10;
-    border-color: transparent;
-    border-radius: 16px;
-    object-fit: contain;
-    transform: scale(clamp(1.05, 0.85 + 0.18 * ((100vw - 713px) / 607), 1.18));
-    /* box-shadow: 0 8px 24px rgba(255, 255, 255, 0.18); */
+   HOVER EFFECT
+============================================ */
+.portfolio-container img:hover {
+  transform: scale(1.06) rotate(1deg);
+  border-radius: 16px;
+  filter: brightness(1.08);
+  object-fit: contain;
+  border: 0;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* ============================================
+   ANIMATION
+============================================ */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ============================================
+   BANNER CONTENT
+============================================ */
+.banner-content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  max-width: 700px;
+
+  animation: slideUp 1.2s ease;
+}
+
+/* ============================================
+   MAIN HEADING
+============================================ */
+.banner-content h1 {
+  font-size: 82px;
+  line-height: 1.05;
+  font-weight: 600;
+
+  color: #ffffff;
+
+  margin-bottom: 24px;
+
+  letter-spacing: -2px;
+
+  opacity: 0;
+  animation: fadeSlide 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* Highlight Text */
+.banner-content h1 span {
+  color: #c9a36a;
+  font-style: italic;
+}
+
+/* ============================================
+   PARAGRAPH
+============================================ */
+.banner-content p {
+  font-size: 18px;
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  max-width: 560px;
+
+  opacity: 0;
+  animation: fadeSlide 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+/* ============================================
+   SECTION TITLE
+============================================ */
+.section-title {
+  width: 100%;
+
+  text-align: center;
+
+padding: 65px 20px 20px;
+}
+
+.section-title span {
+  display: inline-block;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  letter-spacing: 6px;
+  text-transform: uppercase;
+
+  color: #c9a36a;
+
+  margin-bottom: 14px;
+}
+
+.section-title h2 {
+  font-size: 54px;
+  font-weight: 600;
+
+  color: #111111;
+
+  line-height: 1.2;
+}
+
+/* ============================================
+   ANIMATIONS
+============================================ */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ============================================
+   PORTFOLIO END SECTION
+============================================ */
+/* ============================================
+   CONTACT SECTION
+============================================ */
+.portfolio-contact {
+  padding: 120px 20px;
+  text-align: center;
+  background: #111;
+  color: white;
+}
+
+.portfolio-contact span {
+  display: inline-block;
+  letter-spacing: 5px;
+  color: #c9a36a;
+  margin-bottom: 18px;
+  font-size: 14px;
+}/* ============================================
+   CONTACT SECTION
+============================================ */
+.portfolio-contact {
+  padding: 120px 20px;
+  text-align: center;
+  background: #111;
+  color: white;
+
+  overflow: hidden;
+}
+
+/* Small Top Text */
+.portfolio-contact span {
+  display: inline-block;
+
+  letter-spacing: 5px;
+  color: #c9a36a;
+
+  margin-bottom: 18px;
+  font-size: 14px;
+
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* Main Heading */
+.portfolio-contact h2 {
+  font-size: 48px;
+  max-width: 700px;
+
+  margin: auto auto 35px;
+
+  line-height: 1.3;
+
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* Button */
+.portfolio-contact a {
+  display: inline-block;
+
+  padding: 15px 34px;
+
+  border: 1px solid white;
+
+  color: white;
+  text-decoration: none;
+
+  transition: 0.4s ease;
+
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.8s;
+}
+
+/* Hover Animation */
+.portfolio-contact a:hover {
+  background: white;
+  color: black;
+
+  transform: translateY(-5px) scale(1.03);
+
+  box-shadow: 0 10px 25px rgba(255,255,255,0.15);
+}
+
+/* ============================================
+   FADE UP ANIMATION
+============================================ */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ============================================
+   TABLET
+============================================ */
+@media (max-width: 992px) {
+
+  .portfolio-contact h2 {
+    font-size: 40px;
   }
 }
 
 /* ============================================
-   5. TABLET CONTAINER TWEAKS (≤ 768px)
-   ============================================ */
+   MOBILE
+============================================ */
+@media (max-width: 768px) {
+
+  .portfolio-contact {
+    padding: 90px 20px;
+  }
+
+  .portfolio-contact span {
+    letter-spacing: 3px;
+    font-size: 12px;
+  }
+
+  .portfolio-contact h2 {
+    font-size: 32px;
+  }
+
+  .portfolio-contact a {
+    padding: 13px 28px;
+    font-size: 14px;
+  }
+}
+/* ============================================
+   TABLET
+============================================ */
+@media (max-width: 992px) {
+
+  .banner-content h1 {
+    font-size: 58px;
+    line-height: 1.1;
+  }
+
+  .section-title h2 {
+    font-size: 42px;
+  }
+}
+
+/* ============================================
+   MOBILE
+============================================ */
+@media (max-width: 768px) {
+
+  .banner-content h1 {
+    font-size: 42px;
+    line-height: 1.2;
+
+    margin-bottom: 18px;
+  }
+
+  .banner-content p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .section-title {
+    padding: 70px 20px 35px;
+  }
+
+  .section-title span {
+    font-size: 12px;
+    letter-spacing: 4px;
+  }
+
+  .section-title h2 {
+    font-size: 34px;
+  }
+}
+/* ============================================
+   FIX IMAGE CROPPING 1015px - 992px
+============================================ */
+@media (max-width: 1015px) and (min-width: 993px) {
+
+  .portfolio-container img {
+    height: 420px;
+
+    object-fit: cover;
+    object-position: top center;
+  }
+
+}
+/* ============================================
+   TABLET
+============================================ */
+@media (max-width: 992px) {
+  .portfolio-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+
+
+ .portfolio-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .portfolio-container img {
+    height: 480px;
+
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .banner h1 {
+    font-size: 46px;
+    max-width: 100%;
+  }
+
+  .banner h2 {
+    font-size: 30px;
+  }
+}
+
+/* ============================================
+   MOBILE
+============================================ */
 @media (max-width: 768px) {
   .portfolio-container {
-    padding: 40px 15px;
+    grid-template-columns: 1fr;
+    padding: 30px 12px 70px;
     gap: 12px;
-    overflow: hidden;
-  }
-}
-
-/* ============================================
-   6. MOBILE (≤ 712px) — minimal zoom
-   ============================================ */
-@media (max-width: 712px) {
-  .portfolio-container {
-    margin: 0;
-    padding: 20px 10px;
   }
 
   .portfolio-container img {
-    margin-top: 40px;
+    height: 550px;
     border: 2px solid white;
     border-radius: 20px;
   }
 
   .portfolio-container img:hover {
-    transform: scale(1.04);
-    border-radius: 12px;
+    transform: scale(1.03);
   }
-}
-@media (min-width: 300px) and (max-width: 722px) {
-  .portfolio-container img {
-    margin-top: 20%;
-    border: 2px solid white;
-    border-radius: 20px;
+
+  .banner h1 {
+    font-size: 34px;
+  }
+
+  .banner h2 {
+    font-size: 24px;
+  }
+
+  .banner h3 {
+    font-size: 16px;
   }
 }

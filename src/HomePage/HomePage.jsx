@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import "./homepage.css";
 import work from "../assets/worksec.png";
 import work01 from "../assets/work01.jpeg";
-import work02 from "../assets/work02.png";
-import work03 from "../assets/work03.jpeg";
+import work02 from "../assets/IMG18.PNG";
+import work03 from "../assets/IMG_7663.PNG";
 
 // import work4 from "../assets/work4.jpeg";
 import { Camera, CalendarDays, BriefcaseBusiness, Sparkles } from "lucide-react";

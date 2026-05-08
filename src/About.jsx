@@ -5,7 +5,7 @@ import "./about.css";
 import sunita from "./assets/sunita.jpeg";
 import img1 from "./assets/card1.jpg";
 // import img2 from "./assets/card2.jpg";
-import img2 from "./assets/about.PNG";
+import img2 from "./assets/card2.png";
 import img3 from "./assets/card3.jpg";
 import { useNavigate } from "react-router-dom";
 export default function About() {
@@ -37,7 +37,7 @@ export default function About() {
             <div className="intro">
               <h1 className="animate slide-up">My Story</h1>
               <p className="animate slide-up delay-1">
-                I’m <b>Sunita</b>, a passionate photographer driven by the
+                I’m <b>MIRZA</b>, a passionate photographer driven by the
                 art of capturing genuine moments and timeless visuals. My
                 journey began with a simple curiosity—observing light, emotion,
                 and the subtle details that often go unnoticed. Over time, that
