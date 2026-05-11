@@ -2,26 +2,26 @@ import React, { useEffect } from "react";
 import "./portfolio.css";
 
 import img01 from "../assets/portfolio/IMG01.jpg";
-import img02 from "../assets/portfolio/img02.jpeg";
-import img03 from "../assets/portfolio/img03.PNG";
-import img04 from "../assets/portfolio/IMG04.jpeg";
-import img05 from "../assets/portfolio/img05.jpeg";
+import img02 from "../assets/portfolio/img02.webp";
+import img03 from "../assets/portfolio/img03.webp";
+import img04 from "../assets/portfolio/IMG04.webp";
+import img05 from "../assets/portfolio/img05.webp";
 import img06 from "../assets/portfolio/IMG06.jpeg";
-import img07 from "../assets/portfolio/IMG07.jpeg";
-import img08 from "../assets/portfolio/IMG08.PNG";
-import img09 from "../assets/portfolio/img09.PNG";
-import img10 from "../assets/portfolio/IMG10.PNG";
-import img11 from "../assets/portfolio/IMG11.jpeg";
-import img13 from "../assets/portfolio/img13.jpeg";
-import img14 from "../assets/portfolio/img14.jpeg";
-import img15 from "../assets/portfolio/IMG15.jpeg";
-import img16 from "../assets/portfolio/img16.jpeg";
+import img07 from "../assets/portfolio/IMG07.webp";
+import img08 from "../assets/portfolio/IMG08.webp";
+import img09 from "../assets/portfolio/img09.webp";
+import img10 from "../assets/portfolio/IMG10.webp";
+import img11 from "../assets/portfolio/IMG11.webp";
+import img13 from "../assets/portfolio/img13.webp";
+import img14 from "../assets/portfolio/img14.webp";
+import img15 from "../assets/portfolio/IMG15.webp";
+import img16 from "../assets/portfolio/img16.webp";
 
-import img18 from "../assets/portfolio/IMG18.PNG";
-import img19 from "../assets/portfolio/img19.jpeg";
-import img20 from "../assets/portfolio/img20.jpeg";
-import img21 from "../assets/portfolio/img21.jpeg";
-import img22 from "../assets/portfolio/img22.PNG";
+import img18 from "../assets/portfolio/IMG18.webp";
+import img19 from "../assets/portfolio/img19.webp";
+import img20 from "../assets/portfolio/img20.webp";
+import img21 from "../assets/portfolio/img21.webp";
+import img22 from "../assets/portfolio/img22.webp";
 
 
 import { Link } from "react-router-dom";
