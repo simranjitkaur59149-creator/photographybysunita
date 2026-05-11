@@ -73,19 +73,19 @@ export default function Portfolio() {
           <h2>Selected Works</h2>
         </div>
         <section className="portfolio-container">
-          <img src={img01} alt="" />
-          <img src={img02} alt="" />
-          <img src={img03} alt="" />
-          <img src={img04} alt="" />
-          <img src={img05} alt="" />
-          <img src={img06} alt="" />
-          <img src={img07} alt="" />
-          <img src={img08} alt="" />
-          <img src={img09} alt="" />
-          <img src={img10} alt="" />
+          <img src={img01} alt="Traditional female portrait with ethnic jewelry and dramatic lighting" />
+          <img src={img02} alt="Minimal studio portrait of young woman in white outfit" />
+          <img src={img03} alt="Outdoor fashion portrait of woman standing in wheat field" />
+          <img src={img04} alt="Natural indoor portrait of smiling woman in black sleeveless top" />
+          <img src={img05} alt="Outdoor portrait of woman posing near blooming pink flowers" />
+          <img src={img06} alt="Night fashion portrait of woman wearing sunglasses outdoors" />
+          <img src={img07} alt="Portrait of man playing acoustic guitar during live performance" />
+          <img src={img08} alt="Candid portrait of smiling woman in black dress at indoor event" />
+          <img src={img09} alt="Black and white beauty portrait with dramatic studio lighting" />
+          <img src={img10} alt="Indoor portrait of woman in soft golden sunlight" />
 
-          <img src={img11} alt="" />
-          <img src={img13} alt="" />
+          <img src={img11} alt="Outdoor candid portrait of smiling woman near floral background" />
+          <img src={img13} alt="Portrait of woman in traditional outfit posing outdoors" />
           <img src={img14} alt="" />
           <img src={img15} alt="" />
           <img src={img16} alt="" />
