@@ -45,7 +45,8 @@ export default function HomePage() {
                 Timeless , emotional storytelling through photography
               </h3>
               <h1 className="animate slide-right">
-                Capturing Moments Thats Matter
+              Capturing  Moments in Punjab
+                {/* Capturing Moments Thats Matter */}
               </h1>
             </div>
             <h2 className="animate slide-up delay-1">By mirza</h2>
