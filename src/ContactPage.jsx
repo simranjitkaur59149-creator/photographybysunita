@@ -2,7 +2,7 @@ import React from "react";
 import "./contact.css";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
-import contact from "./assets/contact-logo.png";
+import contact from "./assets/contact-logo.webp";
 
 import { useState } from "react";
 

@@ -115,12 +115,13 @@ text-align: justify; /* Justify often looks messy on small mobile screens */
   font-weight: 600;
   text-transform: uppercase;
 
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     #d9b8c4 0%,
     #f8f2f4 50%,
     #c99aaa 100%
-  );
+  ); */
+  background-color:#e9b004;
 
   border: 2px solid;
   border-radius: 4px;

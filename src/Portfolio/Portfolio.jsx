@@ -86,14 +86,14 @@ export default function Portfolio() {
 
           <img src={img11} alt="Outdoor candid portrait of smiling woman near floral background" />
           <img src={img13} alt="Portrait of woman in traditional outfit posing outdoors" />
-          <img src={img14} alt="" />
-          <img src={img15} alt="" />
-          <img src={img16} alt="" />
-          <img src={img18} alt="" />
-          <img src={img19} alt="" />
-          <img src={img20} alt="" />
-          <img src={img21} alt="" />
-          <img src={img22} alt="" />
+          <img src={img14} alt="Outdoor female portrait photography in Punjab by Photography by Mirza" />
+          <img src={img15} alt="Fashion model photoshoot in Punjab with natural lighting" />
+          <img src={img16} alt="Punjabi singer stage performance photography by Photography by Mirza" />
+          <img src={img18} alt="Punjabi bridal makeup and jewelry portrait captured by wedding photographer in Punjab" />
+          <img src={img19} alt="Family candid photography session in Punja" />
+          <img src={img20} alt="Indoor bridal lehenga photoshoot on staircase" />
+          <img src={img21} alt="bridal veil portrait photography" />
+          <img src={img22} alt="Creative child portrait photography with blue studio lighting " />
         </section>
    <section className="portfolio-contact reveal">
   <span>LET’S WORK TOGETHER</span>

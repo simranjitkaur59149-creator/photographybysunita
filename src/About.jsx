@@ -2,10 +2,10 @@ import React from "react";
 import { useEffect } from "react";
 import "./about.css";
 // import sunita from "./assets/about.PNG";
-import sunita from "./assets/sunita.jpeg";
-import img1 from "./assets/card1.jpg";
+import sunita from "./assets/sunita.webp";
+import img1 from "./assets/card1.webp";
 // import img2 from "./assets/card2.jpg";
-import img2 from "./assets/card2.png";
+import img2 from "./assets/card2.webp";
 import img3 from "./assets/card3.jpg";
 import { useNavigate } from "react-router-dom";
 export default function About() {
