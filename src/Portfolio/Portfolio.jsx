@@ -12,48 +12,52 @@ import img08 from "../assets/portfolio/IMG08.webp";
 import img09 from "../assets/portfolio/img09.webp";
 import img10 from "../assets/portfolio/IMG10.webp";
 import img11 from "../assets/portfolio/IMG11.webp";
+import img12 from "../assets/portfolio/IMG12.webp";
 import img13 from "../assets/portfolio/img13.webp";
 import img14 from "../assets/portfolio/img14.webp";
 import img15 from "../assets/portfolio/IMG15.webp";
 import img16 from "../assets/portfolio/img16.webp";
-
+import img17 from "../assets/portfolio/IMG17.webp";
 import img18 from "../assets/portfolio/IMG18.webp";
 import img19 from "../assets/portfolio/img19.webp";
 import img20 from "../assets/portfolio/img20.webp";
 import img21 from "../assets/portfolio/img21.webp";
 import img22 from "../assets/portfolio/img22.webp";
-
+import img23 from "../assets/portfolio/IMG23.webp";
+import img24 from "../assets/portfolio/IMG24.webp";
+import img25 from "../assets/portfolio/IMG25.webp";
+import img26 from "../assets/portfolio/IMG26.webp";
+import img27 from "../assets/portfolio/IMG27.webp";
+import img28 from "../assets/portfolio/IMG28.webp";
+import img29 from "../assets/portfolio/IMG29.webp";
 
 import { Link } from "react-router-dom";
 export default function Portfolio() {
   useEffect(() => {
-  const elements = document.querySelectorAll(
-    ".reveal"
-  );
+    const elements = document.querySelectorAll(".reveal");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    },
-    {
-      threshold: 0.2,
-    }
-  );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      },
+    );
 
-  elements.forEach((el) => observer.observe(el));
+    elements.forEach((el) => observer.observe(el));
 
-  return () => observer.disconnect();
-}, []);
+    return () => observer.disconnect();
+  }, []);
   return (
     <>
       <div style={{ background: "white" }}>
         <section className="porfolio-banner">
           <div className="banner-layer">
-            
             <div className="banner-content">
               <h1>
                 Visual <span>Stories.</span>
@@ -68,42 +72,102 @@ export default function Portfolio() {
             </div>
           </div>
         </section>
-         <div className="section-title">
+        <div className="section-title">
           <span>PORTFOLIO</span>
           <h2>Selected Works</h2>
         </div>
         <section className="portfolio-container">
-          <img src={img01} alt="Traditional female portrait with ethnic jewelry and dramatic lighting" />
-          <img src={img02} alt="Minimal studio portrait of young woman in white outfit" />
-          <img src={img03} alt="Outdoor fashion portrait of woman standing in wheat field" />
-          <img src={img04} alt="Natural indoor portrait of smiling woman in black sleeveless top" />
-          <img src={img05} alt="Outdoor portrait of woman posing near blooming pink flowers" />
-          <img src={img06} alt="Night fashion portrait of woman wearing sunglasses outdoors" />
-          <img src={img07} alt="Portrait of man playing acoustic guitar during live performance" />
-          <img src={img08} alt="Candid portrait of smiling woman in black dress at indoor event" />
-          <img src={img09} alt="Black and white beauty portrait with dramatic studio lighting" />
-          <img src={img10} alt="Indoor portrait of woman in soft golden sunlight" />
-
-          <img src={img11} alt="Outdoor candid portrait of smiling woman near floral background" />
-          <img src={img13} alt="Portrait of woman in traditional outfit posing outdoors" />
-          <img src={img14} alt="Outdoor female portrait photography in Punjab by Photography by Mirza" />
-          <img src={img15} alt="Fashion model photoshoot in Punjab with natural lighting" />
-          <img src={img16} alt="Punjabi singer stage performance photography by Photography by Mirza" />
-          <img src={img18} alt="Punjabi bridal makeup and jewelry portrait captured by wedding photographer in Punjab" />
+          <img
+            src={img01}
+            alt="Traditional female portrait with ethnic jewelry and dramatic lighting"
+          />
+          <img
+            src={img02}
+            alt="Minimal studio portrait of young woman in white outfit"
+          />
+          <img
+            src={img03}
+            alt="Outdoor fashion portrait of woman standing in wheat field"
+          />
+          <img
+            src={img04}
+            alt="Natural indoor portrait of smiling woman in black sleeveless top"
+          />
+          <img src={img29} alt="" />
+          <img
+            src={img05}
+            alt="Outdoor portrait of woman posing near blooming pink flowers"
+          />
+          <img
+            src={img06}
+            alt="Night fashion portrait of woman wearing sunglasses outdoors"
+          />
+          <img
+            src={img07}
+            alt="Portrait of man playing acoustic guitar during live performance"
+          />
+          <img
+            src={img08}
+            alt="Candid portrait of smiling woman in black dress at indoor event"
+          />
+          <img
+            src={img09}
+            alt="Black and white beauty portrait with dramatic studio lighting"
+          />
+          <img
+            src={img10}
+            alt="Indoor portrait of woman in soft golden sunlight"
+          />
+          <img
+            src={img11}
+            alt="Outdoor candid portrait of smiling woman near floral background"
+          />
+<img src={img12} alt="" />
+          <img
+            src={img13}
+            alt="Portrait of woman in traditional outfit posing outdoors"
+          />
+          <img
+            src={img14}
+            alt="Outdoor female portrait photography in Punjab by Photography by Mirza"
+          />
+          <img
+            src={img15}
+            alt="Fashion model photoshoot in Punjab with natural lighting"
+          />
+          <img
+            src={img16}
+            alt="Punjabi singer stage performance photography by Photography by Mirza"
+          />
+          <img src={img17} alt="" />
+          <img
+            src={img18}
+            alt="Punjabi bridal makeup and jewelry portrait captured by wedding photographer in Punjab"
+          />
           <img src={img19} alt="Family candid photography session in Punja" />
-          <img src={img20} alt="Indoor bridal lehenga photoshoot on staircase" />
+          <img
+            src={img20}
+            alt="Indoor bridal lehenga photoshoot on staircase"
+          />
           <img src={img21} alt="bridal veil portrait photography" />
-          <img src={img22} alt="Creative child portrait photography with blue studio lighting " />
+          <img
+            src={img22}
+            alt="Creative child portrait photography with blue studio lighting "
+          />
+          <img src={img23} alt="" />
+          <img src={img24} alt="" />
+          <img src={img25} alt="" />
+          <img src={img26} alt="" />
+          <img src={img27} alt="" />
+          <img src={img28} alt="" />
         </section>
-   <section className="portfolio-contact reveal">
-  <span>LET’S WORK TOGETHER</span>
+        <section className="portfolio-contact reveal">
+          <span>LET’S WORK TOGETHER</span>
 
-  <h2>Available For Projects & Collaborations</h2>
+          <h2>Available For Projects & Collaborations</h2>
 
-  <Link to="/photography/contact">
-    Get In Touch
-  </Link>
-</section>
+          <Link to="/photography/contact">Get In Touch</Link>
+        </section>
       </div>
     </>
   );
