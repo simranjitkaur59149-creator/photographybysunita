@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import "./portfolio.css";
 
+import { Link } from "react-router-dom";
+
 import img01 from "../assets/portfolio/IMG01.jpg";
 import img02 from "../assets/portfolio/img02.webp";
 import img03 from "../assets/portfolio/img03.webp";
@@ -38,8 +40,169 @@ import img34 from "../assets/portfolio/IMG34.webp";
 import img35 from "../assets/portfolio/IMG35.webp";
 import img36 from "../assets/portfolio/IMG36.webp";
 import img37 from "../assets/portfolio/IMG37.webp";
+import img38 from "../assets/portfolio/IMG38.webp";
+import img39 from "../assets/portfolio/IMG39.webp";
+import img40 from "../assets/portfolio/IMG40.webp";
+import img41 from "../assets/portfolio/IMG41.webp";
+import img42 from "../assets/portfolio/IMG42.webp";
+import img43 from "../assets/portfolio/IMG43.webp";
+import img44 from "../assets/portfolio/IMG44.webp";
+import img45 from "../assets/portfolio/IMG45.webp";
+import img46 from "../assets/portfolio/IMG46.webp";
+import img47 from "../assets/portfolio/IMG47.webp";
+import img48 from "../assets/portfolio/IMG48.webp";
+import img49 from "../assets/portfolio/IMG49.webp";
+import img50 from "../assets/portfolio/IMG50.webp";
+import img51 from "../assets/portfolio/IMG51.webp";
+import img52 from "../assets/portfolio/IMG52.webp";
 
-import { Link } from "react-router-dom";
+const PORTFOLIO_IMAGES = [
+  {
+    src: img01,
+    alt: "Traditional female portrait with ethnic jewelry and dramatic lighting",
+  },
+  { src: img02, alt: "Minimal studio portrait of young woman in white outfit" },
+  {
+    src: img03,
+    alt: "Outdoor fashion portrait of woman standing in wheat field",
+  },
+  {
+    src: img04,
+    alt: "Natural indoor portrait of smiling woman in black sleeveless top",
+  },
+  { src: img29, alt: "Studio portrait model work" },
+  {
+    src: img05,
+    alt: "Outdoor portrait of woman posing near blooming pink flowers",
+  },
+  {
+    src: img06,
+    alt: "Night fashion portrait of woman wearing sunglasses outdoors",
+  },
+  {
+    src: img07,
+    alt: "Portrait of man playing acoustic guitar during live performance",
+  },
+  {
+    src: img08,
+    alt: "Candid portrait of smiling woman in black dress at indoor event",
+  },
+ 
+  { src: img10, alt: "Indoor portrait of woman in soft golden sunlight" },
+  {
+    src: img11,
+    alt: "Outdoor candid portrait of smiling woman near floral background",
+  },
+  { src: img12, alt: "Fashion portrait series" },
+  {
+    src: img13,
+    alt: "Portrait of woman in traditional outfit posing outdoors",
+  },
+  {
+    src: img14,
+    alt: "Outdoor female portrait photography in Punjab by Photography by Mirza",
+  },
+  {
+    src: img15,
+    alt: "Fashion model photoshoot in Punjab with natural lighting",
+  },
+  
+  { src: img17, alt: "Candid event portrait" },
+  
+  { src: img19, alt: "Family candid photography session in Punjab" },
+  { src: img20, alt: "Indoor bridal lehenga photoshoot on staircase" },
+  { src: img21, alt: "Bridal veil portrait photography" },
+  {
+    src: img22,
+    alt: "Creative child portrait photography with blue studio lighting",
+  },
+  { src: img23, alt: "Portfolio creative photo work" },
+  { src: img24, alt: "Portfolio photo collection" },
+  { src: img25, alt: "Portfolio editorial shot" },
+  { src: img26, alt: "Portfolio artistic capture" },
+  { src: img27, alt: "Portfolio fashion concept" },
+  { src: img28, alt: "Portfolio outdoor shoot" },
+  { src: img30, alt: "Portfolio lifestyle snapshot" },
+  { src: img31, alt: "Portfolio dynamic portrait" },
+  { src: img32, alt: "Portfolio creative portrait" },
+  { src: img33, alt: "Portfolio event highlight" },
+  { src: img34, alt: "Portfolio aesthetic showcase" },
+  { src: img35, alt: "Portfolio traditional concept" },
+  { src: img36, alt: "Portfolio visual storytelling" },
+  { src: img37, alt: "Portfolio collection highlight" },
+  {
+    src: img38,
+    alt: "Young woman in white summer dress standing in open green field near dining table",
+  },
+  {
+    src: img47,
+    alt: "Monsoon portrait of young woman in teal ethnic suit behind raindrop glass",
+  },
+  {
+    src: img39,
+    alt: "Outdoor portrait of woman in white maxi dress leaning against tree trunk",
+  },
+  {
+    src: img41,
+    alt: "Live performance portrait of Punjabi singer in pink turban under blue stage spotlight",
+  },
+  {
+    src: img42,
+    alt: "Stage lighting close-up portrait of male singer performing with microphone",
+  },
+{
+    src: img16,
+    alt: "Punjabi singer stage performance photography by Photography by Mirza",
+  },
+  {
+    src: img43,
+    alt: "Stylish man wearing sunglasses and printed pink floral shirt posing outdoors",
+  },
+  {
+    src: img48,
+    alt: "Creative double exposure portrait of woman standing near wooden doorway",
+  },
+  {
+    src: img44,
+    alt: "Medium shot of stylish man in printed shirt and sunglasses",
+  },
+  {
+    src: img45,
+    alt: "Candid portrait of smiling couple in matching white outfits outdoors",
+  },
+  {
+    src: img46,
+    alt: "Close-up family moment with parents looking lovingly at toddler",
+  },
+  {
+    src: img40,
+    alt: "Woman in traditional white saree with golden border posing outdoors",
+  },
+
+  {
+    src: img49,
+    alt: "Black and white dramatic shot of man with Indian tricolor flag draped over shoulders",
+  },
+  {
+    src: img50,
+    alt: "Red-toned protest portrait of young girl holding Save My Future sign",
+  }, {
+    src: img09,
+    alt: "Black and white beauty portrait with dramatic studio lighting",
+  },
+  {
+    src: img51,
+    alt: "Woman posing in rust-orange embroidered Punjabi suit holding gold potli bag",
+  },
+  {
+    src: img52,
+    alt: "Indoor portrait of smiling woman in light blue embellished ethnic outfit",
+  },{
+    src: img18,
+    alt: "Punjabi bridal makeup and jewelry portrait captured by wedding photographer in Punjab",
+  },
+];
+
 export default function Portfolio() {
   useEffect(() => {
     const elements = document.querySelectorAll(".reveal");
@@ -85,182 +248,18 @@ export default function Portfolio() {
           <h2>Selected Works</h2>
         </div>
         <section className="portfolio-container">
-  <img
-    src={img01}
-    alt="Traditional female portrait with ethnic jewelry and dramatic lighting"
-    loading="eager"
-    fetchPriority="high"
-  />
-
-  <img
-    src={img02}
-    alt="Minimal studio portrait of young woman in white outfit"
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img03}
-    alt="Outdoor fashion portrait of woman standing in wheat field"
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img04}
-    alt="Natural indoor portrait of smiling woman in black sleeveless top"
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img29}
-    alt=""
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img05}
-    alt="Outdoor portrait of woman posing near blooming pink flowers"
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img06}
-    alt="Night fashion portrait of woman wearing sunglasses outdoors"
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img07}
-    alt="Portrait of man playing acoustic guitar during live performance"
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img08}
-    alt="Candid portrait of smiling woman in black dress at indoor event"
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img09}
-    alt="Black and white beauty portrait with dramatic studio lighting"
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img10}
-    alt="Indoor portrait of woman in soft golden sunlight"
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img11}
-    alt="Outdoor candid portrait of smiling woman near floral background"
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img12}
-    alt=""
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img13}
-    alt="Portrait of woman in traditional outfit posing outdoors"
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img14}
-    alt="Outdoor female portrait photography in Punjab by Photography by Mirza"
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img15}
-    alt="Fashion model photoshoot in Punjab with natural lighting"
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img16}
-    alt="Punjabi singer stage performance photography by Photography by Mirza"
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img17}
-    alt=""
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img18}
-    alt="Punjabi bridal makeup and jewelry portrait captured by wedding photographer in Punjab"
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img19}
-    alt="Family candid photography session in Punja"
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img20}
-    alt="Indoor bridal lehenga photoshoot on staircase"
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img21}
-    alt="bridal veil portrait photography"
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img
-    src={img22}
-    alt="Creative child portrait photography with blue studio lighting"
-    loading="lazy"
-    decoding="async"
-  />
-
-  <img src={img23} alt="" loading="lazy" decoding="async" />
-  <img src={img24} alt="" loading="lazy" decoding="async" />
-  <img src={img25} alt="" loading="lazy" decoding="async" />
-  <img src={img26} alt="" loading="lazy" decoding="async" />
-  <img src={img27} alt="" loading="lazy" decoding="async" />
-  <img src={img28} alt="" loading="lazy" decoding="async" />
-  <img src={img30} alt="" loading="lazy" decoding="async" />
-  <img src={img31} alt="" loading="lazy" decoding="async" />
-  <img src={img32} alt="" loading="lazy" decoding="async" />
-  <img src={img33} alt="" loading="lazy" decoding="async" />
-  <img src={img34} alt="" loading="lazy" decoding="async" />
-  <img src={img35} alt="" loading="lazy" decoding="async" />
-  <img src={img36} alt="" loading="lazy" decoding="async" />
-  <img src={img37} alt="" loading="lazy" decoding="async" />
-</section>
+          {PORTFOLIO_IMAGES.map((img, index) => (
+            <img
+              key={index}
+              src={img.src}
+              alt={img.alt || `Portfolio image ${index + 1}`}
+              className="reveal"
+              loading={index < 2 ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : "auto"}
+              decoding="async"
+            />
+          ))}
+        </section>
         <section className="portfolio-contact reveal">
           <span>LET’S WORK TOGETHER</span>
 
